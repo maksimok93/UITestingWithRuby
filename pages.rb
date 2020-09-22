@@ -9,8 +9,8 @@ class BasePage
   include Capybara::DSL
   def open_main_page
     visit('/')
-    fill_in 'user_login', :with => get_file_content("credentials")[0]
-    fill_in 'user_pass', :with => get_file_content("credentials")[0]
+    fill_in 'user_login', :with => get_file_content("credentials.txt")[0]
+    fill_in 'user_pass', :with => get_file_content("credentials.txt")[0]
     find(EntryPageLocators::LOGIN).click
   end
 
