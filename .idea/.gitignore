@@ -8,3 +8,7 @@
 /httpRequests/
 
 credentials.txt
+.bundle/
+.idea/
+Gemfile
+Gemfile.lock
