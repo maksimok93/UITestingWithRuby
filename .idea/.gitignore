@@ -6,9 +6,4 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
-
-credentials.txt
-.bundle/
-.idea/
-Gemfile
-Gemfile.lock
+../credentials.txt
