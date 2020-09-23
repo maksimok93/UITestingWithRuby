@@ -1,4 +1,4 @@
-require './locators'
+require_relative 'locators'
 require 'capybara/dsl'
 
 def get_file_content(filename)
