@@ -8,5 +8,5 @@ Capybara.register_driver :selenium do |app|
 end
 
 Capybara.run_server = false
-Capybara.current_driver = :selenium
+Capybara.default_driver = :selenium
 Capybara.app_host = Links::ENTRY_PAGE

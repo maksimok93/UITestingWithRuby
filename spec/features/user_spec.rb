@@ -16,9 +16,17 @@ feature 'OpenSourceCMS test', type: :feature do
 
       expect(page).to have_content("New user created.")
     end
-  end
 
-  describe Pages::Users do
+    it "#edit_user" do
+      session = Pages::Users.new
+      session.open_main_page
+      session.visit_users_page
+      session.choose_user('John')
+      session.edit_user('Author', 'Mark', 'Mich')
+
+      expect(page).to have_content("User updated.")
+    end
+
     it "#delete_user" do
       session = Pages::Users.new
       session.open_main_page
