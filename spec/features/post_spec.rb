@@ -4,14 +4,14 @@ require_relative '../../pages'
 require_relative '../../locators'
 
 feature 'OpenSourceCMS Posts test', type: :feature do
-  describe Pages::Posts do
+  describe 'When on Posts Page' do
 
     before(:each) do
       @posts_page = Pages::Posts.new
       @posts_page.open_main_page
     end
 
-    it "#add_new_post" do
+    it 'Verifies possibility of adding new post by user' do
       @posts_page.add_new_post("My test post")
       expect(page).to have_content("Post published.")
     end

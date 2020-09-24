@@ -17,13 +17,13 @@ feature 'OpenSourceCMS test', type: :feature do
       expect(page).to have_content("New user created.")
     end
 
-    it "#edit_user" do
+    it 'Verifies possibility of editing existing user' do
       @users_page.choose_user('John')
       @users_page.edit_user('Author', 'Mark', 'Mich')
       expect(page).to have_content("User updated.")
     end
 
-    it "#delete_user" do
+    it 'Verifies user can be deleted' do
       @users_page.delete_user('John')
       expect(page).to have_content("User deleted.")
     end
