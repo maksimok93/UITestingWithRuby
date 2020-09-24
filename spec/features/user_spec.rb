@@ -7,24 +7,24 @@ feature 'OpenSourceCMS test', type: :feature do
 
   describe Pages::Users do
     before(:each) do
-      @session = Pages::Users.new
-      @session.open_main_page
-      @session.visit_users_page
+      @users_page = Pages::Users.new
+      @users_page.open_main_page
+      @users_page.visit_users_page
     end
 
     it "#add_new_user" do
-      @session.add_new_user('John', 'test@example.com', 'John', 'Smith', 'google.com', 'Password<>12348989898989')
+      @users_page.add_new_user('John', 'test@example.com', 'John', 'Smith', 'google.com', 'Password<>12348989898989')
       expect(page).to have_content("New user created.")
     end
 
     it "#edit_user" do
-      @session.choose_user('John')
-      @session.edit_user('Author', 'Mark', 'Mich')
+      @users_page.choose_user('John')
+      @users_page.edit_user('Author', 'Mark', 'Mich')
       expect(page).to have_content("User updated.")
     end
 
     it "#delete_user" do
-      @session.delete_user('John')
+      @users_page.delete_user('John')
       expect(page).to have_content("User deleted.")
     end
   end

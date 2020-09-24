@@ -7,8 +7,8 @@ feature 'OpenSourceCMS Dashboard test', type: :feature do
   describe Pages::Dashboard do
 
     before(:each) do
-      @session = Pages::Dashboard.new
-      @session.open_main_page
+      @dashboard_page = Pages::Dashboard.new
+      @dashboard_page.open_main_page
     end
 
     it "#Presence of text: WordPress 5.5.1 is available!" do
