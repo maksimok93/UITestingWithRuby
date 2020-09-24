@@ -58,8 +58,9 @@ module Pages
   class Posts < BasePage
     def add_new_post(user_input)
       visit(Links::NEW_POST)
-      fill_in 'Add title', :with => user_input
-      find(PostsLocators::PUBLISH).click
+      fill_in 'Add title', with: user_input
+      click_button('Publish')
+      click_button('Publish')
     end
   end
 
@@ -70,13 +71,13 @@ module Pages
 
     def add_new_user(username, email, first_name, last_name, website, password)
       visit(Links::NEW_USER)
-      fill_in 'Username', :with => username
-      fill_in 'Email', :with => email
-      fill_in 'First Name', :with => first_name
-      fill_in 'Last Name', :with => last_name
-      fill_in 'Website', :with => website
+      fill_in 'Username', with: username
+      fill_in 'Email', with: email
+      fill_in 'First Name', with: first_name
+      fill_in 'Last Name', with: last_name
+      fill_in 'Website', with: website
       find(UsersLocators::SHOW_PASSWORD).click
-      fill_in 'Password', :with => password
+      fill_in 'Password', with: password
       find(UsersLocators::ADD_NEW_USER).click
     end
 
@@ -86,9 +87,9 @@ module Pages
 
     def edit_user(role, first_name, last_name, website=nil)
       select "#{role}", from: "role"
-      fill_in 'First Name', :with => first_name
-      fill_in 'Last Name', :with => last_name
-      fill_in 'Website', :with => website
+      fill_in 'First Name', with: first_name
+      fill_in 'Last Name', with: last_name
+      fill_in 'Website', with: website
       click_button('Update User')
     end
 

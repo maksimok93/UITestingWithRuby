@@ -9,11 +9,6 @@ module HeaderLocators
   NEW = 'li[id="wp-admin-bar-new-content"]'
 end
 
-module PostsLocators
-  PUBLISH = 'input[id="publish"]'
-  CONFIRM_PUBLISH = 'button[class="components-button editor-post-publish-button is-button is-default is-primary is-large"]'
-end
-
 module DashboardLocators
   SCREEN_OPTIONS = 'button[id="show-settings-link"]'
 end
