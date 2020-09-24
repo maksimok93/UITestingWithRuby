@@ -60,7 +60,6 @@ module Pages
       visit(Links::NEW_POST)
       fill_in 'Add title', :with => user_input
       find(PostsLocators::PUBLISH).click
-      find(PostsLocators::CONFIRM_PUBLISH).click
     end
   end
 

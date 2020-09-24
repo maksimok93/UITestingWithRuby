@@ -10,7 +10,7 @@ module HeaderLocators
 end
 
 module PostsLocators
-  PUBLISH = 'button[class="components-button editor-post-publish-panel__toggle is-button is-primary"]'
+  PUBLISH = 'input[id="publish"]'
   CONFIRM_PUBLISH = 'button[class="components-button editor-post-publish-button is-button is-default is-primary is-large"]'
 end
 
