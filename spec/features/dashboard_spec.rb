@@ -1,6 +1,4 @@
 require 'capybara/rspec'
-require 'capybara'
-require 'selenium-webdriver'
 require_relative '../../spec/spec_helper'
 require_relative '../../pages'
 require_relative '../../locators'
