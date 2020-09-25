@@ -20,7 +20,7 @@ class Users < BasePage
   end
 
   def edit_user(role, first_name, last_name, website=nil)
-    select "#{role}", from: "role"
+    select "#{role}", from: 'role'
     fill_in 'First Name', with: first_name
     fill_in 'Last Name', with: last_name
     fill_in 'Website', with: website
