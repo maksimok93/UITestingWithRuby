@@ -1,12 +1,17 @@
 require_relative '../locators'
 require 'capybara/dsl'
 
-def get_file_content(filename)
-  IO.readlines("#{filename}")
-end
-
 class BasePage
   include Capybara::DSL
+
+  private
+
+  def get_file_content(filename)
+    IO.readlines("#{filename}")
+  end
+
+  public
+
   def open_main_page
     visit('/')
     fill_in 'user_login', with: get_file_content('credentials.txt')[0]
