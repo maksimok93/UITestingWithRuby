@@ -1,13 +1,10 @@
-require 'capybara/rspec'
 require_relative '../../spec/spec_helper'
-require_relative '../../pages'
-require_relative '../../locators'
 
 feature 'OpenSourceCMS Dashboard test', type: :feature do
   describe 'When on Dashboard Page' do
 
     before(:each) do
-      @dashboard_page = Pages::Dashboard.new
+      @dashboard_page = Dashboard.new
       @dashboard_page.open_main_page
     end
 

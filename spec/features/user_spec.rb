@@ -1,13 +1,10 @@
-require 'capybara/rspec'
 require_relative '../../spec/spec_helper'
-require_relative '../../pages'
-require_relative '../../locators'
 
 feature 'OpenSourceCMS test', type: :feature do
 
   describe 'When on Users Page' do
     before(:each) do
-      @users_page = Pages::Users.new
+      @users_page = Users.new
       @users_page.open_main_page
       @users_page.visit_users_page
     end
