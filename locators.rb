@@ -9,6 +9,10 @@ module HeaderLocators
   NEW = 'li[id="wp-admin-bar-new-content"]'
 end
 
+module LeftMenuLocators
+  LEFT_MENU = 'div[id="adminmenuback"]'
+end
+
 module DashboardLocators
   SCREEN_OPTIONS = 'button[id="show-settings-link"]'
 end

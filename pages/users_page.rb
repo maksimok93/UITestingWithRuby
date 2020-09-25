@@ -1,10 +1,12 @@
 class Users < BasePage
   def visit_users_page
     visit(Links::USERS)
+    on_page!
   end
 
   def visit_new_user_page
     visit(Links::NEW_USER)
+    on_page!
   end
 
   def add_new_user(username, email, first_name, last_name, website, password)
