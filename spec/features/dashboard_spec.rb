@@ -17,7 +17,7 @@ feature 'OpenSourceCMS Dashboard test', type: :feature do
     end
 
     it 'Verifies presence of "New" dropdown menu' do
-      expect(page).to have_select("wp-admin-bar-new-content", :with_options => %w[Post Media Page Users])
+      expect(page).to have_select("wp-admin-bar-new-content", with_options: %w[Post Media Page Users])
     end
   end
 end
