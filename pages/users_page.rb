@@ -3,8 +3,11 @@ class Users < BasePage
     visit(Links::USERS)
   end
 
-  def add_new_user(username, email, first_name, last_name, website, password)
+  def visit_new_user_page
     visit(Links::NEW_USER)
+  end
+
+  def add_new_user(username, email, first_name, last_name, website, password)
     fill_in 'Username', with: username
     fill_in 'Email', with: email
     fill_in 'First Name', with: first_name

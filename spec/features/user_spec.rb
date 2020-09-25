@@ -10,6 +10,7 @@ feature 'OpenSourceCMS test', type: :feature do
     end
 
     it 'Verifies user can be created' do
+      @users_page.visit_new_user_page
       @users_page.add_new_user('John', 'test@example.com', 'John', 'Smith', 'google.com', 'Password<>12348989898989')
       expect(page).to have_content('New user created.')
     end
