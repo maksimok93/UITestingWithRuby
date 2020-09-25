@@ -1,4 +1,4 @@
-require_relative '../../spec/spec_helper'
+require_relative '../spec_helper'
 
 feature 'OpenSourceCMS Dashboard test', type: :feature do
   describe 'When on Dashboard Page' do

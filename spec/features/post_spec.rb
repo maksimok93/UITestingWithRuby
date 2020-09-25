@@ -1,4 +1,4 @@
-require_relative '../../spec/spec_helper'
+require_relative '../spec_helper'
 
 feature 'OpenSourceCMS Posts test', type: :feature do
   describe 'When on Posts Page' do
