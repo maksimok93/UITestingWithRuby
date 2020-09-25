@@ -15,8 +15,8 @@ feature 'OpenSourceCMS Dashboard test', type: :feature do
       expect(page).to have_content("WordPress 5.5.1 is available!")
     end
 
-    it 'Verifies presence of "Save Draft" button' do
-      expect(page).to have_selector(:link_or_button, "Save Draft")
+    it 'Verifies presence of "Customize Your Site" button' do
+      expect(page).to have_selector(:link_or_button, "Customize Your Site")
     end
 
     it 'Verifies presence of "New" dropdown menu' do
