@@ -5,6 +5,7 @@ require_relative '../pages/base_page'
 require_relative '../pages/dashboard_page'
 require_relative '../pages/posts_page'
 require_relative '../pages/users_page'
+require_relative '../pages/export_page'
 require_relative '../locators'
 
 Capybara.register_driver :selenium do |app|
