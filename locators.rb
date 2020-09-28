@@ -23,6 +23,8 @@ module UsersLocators
   SHOW_PASSWORD = 'button[class="button wp-generate-pw hide-if-no-js"]'
   APPLY = 'input[id="doaction2"]'
   ACTIONS = 'bulk-action-selector-bottom'
+  NEW_ROLE = 'new_role'
+  CHANGE = 'input[id="changeit"]'
 end
 
 module Links

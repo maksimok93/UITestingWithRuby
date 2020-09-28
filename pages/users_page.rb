@@ -37,4 +37,9 @@ class Users < BasePage
     choose_dropdown_component('Delete', UsersLocators::ACTIONS, UsersLocators::APPLY)
     click_button('Confirm Deletion')
   end
+
+  def change_users_role(name, new_role)
+    check("Select #{name}")
+    choose_dropdown_component("#{new_role}", UsersLocators::NEW_ROLE, UsersLocators::CHANGE)
+  end
 end

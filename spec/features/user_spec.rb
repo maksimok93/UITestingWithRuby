@@ -47,5 +47,10 @@ feature 'OpenSourceCMS test', type: :feature do
       @users_page.delete_user('John')
       expect(page).to have_content('User deleted.')
     end
+
+    it 'Verifies users role can be edited' do
+      @users_page.change_users_role('Kyle', 'Editor')
+      expect(page).to have_content('Changed roles.')
+    end
   end
 end
