@@ -34,8 +34,7 @@ class Users < BasePage
 
   def delete_user(name)
     check("Select #{name}")
-    select 'Delete', from: UsersLocators::ACTIONS
-    find(UsersLocators::APPLY).click
+    choose_dropdown_component('Delete', UsersLocators::ACTIONS, UsersLocators::APPLY)
     click_button('Confirm Deletion')
   end
 end

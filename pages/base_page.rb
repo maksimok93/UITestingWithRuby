@@ -1,8 +1,9 @@
 require_relative '../locators'
+require_relative '../components'
 require 'capybara/dsl'
 
 class BasePage
-  include Capybara::DSL
+  include Capybara::DSL, Components
 
   private
 
