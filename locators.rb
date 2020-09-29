@@ -34,3 +34,7 @@ module Links
   USERS = 'https://s1.demo.opensourcecms.com/wordpress/wp-admin/users.php'
   EXPORT = 'https://s1.demo.opensourcecms.com/wordpress/wp-admin/export.php'
 end
+
+module ToolsLocators
+  STATUS = 'post-status'
+end
