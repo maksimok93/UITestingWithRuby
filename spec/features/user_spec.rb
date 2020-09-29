@@ -28,6 +28,10 @@ feature 'OpenSourceCMS test', type: :feature do
       @users_page.add_new_user('Nick', 'test', 'John', 'Smith', 'google.com', 'Password<>12348989898989')
       expect(page).to have_content('The email address isn’t correct.')
     end
+
+    it 'Verifies if Add New User button is enabled' do
+      expect(page).to have_button('Add New User')
+    end
   end
 
   describe 'When on User Page' do
@@ -51,6 +55,10 @@ feature 'OpenSourceCMS test', type: :feature do
     it 'Verifies users role can be edited' do
       @users_page.change_users_role('Kyle', 'Editor')
       expect(page).to have_content('Changed roles.')
+    end
+
+    it 'Verifies if Search Users button is enabled' do
+      expect(page).to have_button('Search Users')
     end
   end
 end

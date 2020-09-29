@@ -26,5 +26,3 @@ feature 'OpenSourceCMS Tools test', type: :feature do
     end
   end
 end
-
-#TODO Disabled? button
