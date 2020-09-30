@@ -3,6 +3,8 @@ require_relative '../spec_helper'
 feature 'OpenSourceCMS test', type: :feature do
 
   describe 'When on New User Page' do
+    #TODO Let paramemetrized
+    # TODO Hash
     before(:each) do
       @users_page = Users.new
       @users_page.open_main_page
