@@ -19,5 +19,16 @@ feature 'OpenSourceCMS Dashboard test', type: :feature do
     it 'Verifies presence of "New" dropdown menu' do
       expect(page).to have_select('wp-admin-bar-new-content', with_options: %w[Post Media Page Users])
     end
+
+    it 'Verifies if "At a Glance" checkbox is selected' do
+      find(DashboardLocators::SCREEN_OPTIONS).click
+      expect(page).to have_field('At a Glance', checked: true)
+    end
+
+    it 'Verifies if "Quick Draft" checkbox is not selected' do
+      find(DashboardLocators::SCREEN_OPTIONS).click
+      @dashboard_page.update_screen_options('Quick Draft')
+      expect(page).to have_field('Quick Draft', checked: false )
+    end
   end
 end
