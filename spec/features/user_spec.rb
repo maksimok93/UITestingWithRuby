@@ -4,8 +4,8 @@ require_relative '../spec_helper'
 
 feature 'OpenSourceCMS test', type: :feature do
   describe 'When on New User Page,' do
-    let(:user) { eval(File.open('users_data', &:read)) }
-    let(:messages) { eval(File.open('messages_data', &:read)) }
+    let(:user) { eval(File.open('tests_data/users', &:read)) }
+    let(:messages) { eval(File.open('tests_data/messages', &:read)) }
 
     describe 'when all test data is valid' do
       before(:each) do
