@@ -2,7 +2,7 @@
 
 require_relative '../spec_helper'
 
-RADIO_BUTTONS = ['All content', 'Posts', 'Pages', 'Media']
+RADIO_BUTTONS = ['All content', 'Posts', 'Pages', 'Media'].to_a.freeze
 
 feature 'OpenSourceCMS Tools test', type: :feature do
   describe 'When on Tools Page' do
