@@ -1,0 +1,6 @@
+{
+  success_register: 'New user created.',
+  warning_username: 'This username is already registered. Please choose another one.',
+  warning_email: 'This email is already registered, please choose another one.',
+  incorrect_email: 'The email address isn’t correct.'
+}

@@ -1,0 +1,8 @@
+{
+  username: 'John',
+  email: 'test@example.com',
+  first_name: 'John',
+  last_name: 'Smith',
+  website: 'google.com',
+  password: 'Password<>12348989898989'
+}
