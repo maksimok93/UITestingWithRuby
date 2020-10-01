@@ -4,6 +4,7 @@ require_relative '../locators'
 require_relative '../components'
 require 'capybara/dsl'
 
+# All methods from this class will inherited by specific Page classes
 class BasePage
   include Capybara::DSL
   include Components

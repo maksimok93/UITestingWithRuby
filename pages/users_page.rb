@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Methods which can be used on Users Page
 class Users < BasePage
   def visit_users_page
     visit(Links::USERS)

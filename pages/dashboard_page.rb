@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Methods which can be used on Dashboard Page
 class Dashboard < BasePage
   def update_screen_options(option, mode = 'uncheck')
     find(DashboardLocators::SCREEN_OPTIONS).click

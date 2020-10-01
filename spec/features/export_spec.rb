@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative '../spec_helper'
+
 RADIO_BUTTONS = ['All content', 'Posts', 'Pages', 'Media']
 
 feature 'OpenSourceCMS Tools test', type: :feature do
@@ -12,10 +13,10 @@ feature 'OpenSourceCMS Tools test', type: :feature do
     end
 
     RADIO_BUTTONS.each do |radio|
-    it "Verifies that #{radio} button is displayed on export page" do
-      choose(radio)
-      expect(find_field(radio).checked?).to eq(true)
-    end
+      it "Verifies that #{radio} button is displayed on export page" do
+        choose(radio)
+        expect(find_field(radio).checked?).to eq(true)
+      end
     end
 
     it 'Verifies if "Posts" radio button is not selected' do
