@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 require_relative '../spec_helper'
 
 feature 'OpenSourceCMS Dashboard test', type: :feature do
   describe 'When on Dashboard Page' do
-
     before(:each) do
       @dashboard_page = Dashboard.new
       @dashboard_page.open_main_page
@@ -28,7 +29,7 @@ feature 'OpenSourceCMS Dashboard test', type: :feature do
     it 'Verifies if "Quick Draft" checkbox is not selected' do
       find(DashboardLocators::SCREEN_OPTIONS).click
       @dashboard_page.update_screen_options('Quick Draft')
-      expect(page).to have_field('Quick Draft', checked: false )
+      expect(page).to have_field('Quick Draft', checked: false)
     end
   end
 end

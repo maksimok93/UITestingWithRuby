@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Users < BasePage
   def visit_users_page
     visit(Links::USERS)
@@ -21,11 +23,11 @@ class Users < BasePage
   end
 
   def choose_user(name)
-    click_link("#{name}")
+    click_link(name)
   end
 
-  def edit_user(role, first_name, last_name, website=nil)
-    select "#{role}", from: 'role'
+  def edit_user(role, first_name, last_name, website = nil)
+    select role.to_s, from: 'role'
     fill_in 'First Name', with: first_name
     fill_in 'Last Name', with: last_name
     fill_in 'Website', with: website
@@ -40,6 +42,6 @@ class Users < BasePage
 
   def change_users_role(name, new_role)
     check("Select #{name}")
-    choose_dropdown_component("#{new_role}", UsersLocators::NEW_ROLE, UsersLocators::CHANGE)
+    choose_dropdown_component(new_role.to_s, UsersLocators::NEW_ROLE, UsersLocators::CHANGE)
   end
 end

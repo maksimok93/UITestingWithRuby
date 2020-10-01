@@ -1,10 +1,11 @@
+# frozen_string_literal: true
+
 require_relative '../spec_helper'
 
 feature 'OpenSourceCMS test', type: :feature do
   describe 'When on New User Page,' do
-
-    let(:user) { eval(File.open('users_data') { |file| file.read } ) }
-    let(:messages) { eval(File.open('messages_data') { |file| file.read } ) }
+    let(:user) { eval(File.open('users_data', &:read)) }
+    let(:messages) { eval(File.open('messages_data', &:read)) }
 
     describe 'when all test data is valid' do
       before(:each) do
@@ -12,12 +13,13 @@ feature 'OpenSourceCMS test', type: :feature do
         @users_page.open_main_page
         @users_page.visit_new_user_page
         @users_page.add_new_user(
-            user[:username],
-            user[:email],
-            user[:first_name],
-            user[:last_name],
-            user[:website],
-            user[:password])
+          user[:username],
+          user[:email],
+          user[:first_name],
+          user[:last_name],
+          user[:website],
+          user[:password]
+        )
       end
 
       it 'Verifies user can be created' do
@@ -45,7 +47,14 @@ feature 'OpenSourceCMS test', type: :feature do
       end
 
       it "Verifies user can't be created if e-mail isn't correct" do
-        @users_page.add_new_user(user[:username], 'test', user[:first_name], user[:last_name], user[:website], user[:password])
+        @users_page.add_new_user(
+          user[:username],
+          'test',
+          user[:first_name],
+          user[:last_name],
+          user[:website],
+          user[:password]
+        )
         expect(page).to have_content(messages[:incorrect_email])
       end
     end

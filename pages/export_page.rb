@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Export < BasePage
   def visit_export_page
     visit(Links::EXPORT)

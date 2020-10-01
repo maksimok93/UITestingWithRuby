@@ -1,14 +1,17 @@
+# frozen_string_literal: true
+
 require_relative '../locators'
 require_relative '../components'
 require 'capybara/dsl'
 
 class BasePage
-  include Capybara::DSL, Components
+  include Capybara::DSL
+  include Components
 
   private
 
   def get_file_content(filename)
-    IO.readlines("#{filename}")
+    IO.readlines(filename.to_s)
   end
 
   public

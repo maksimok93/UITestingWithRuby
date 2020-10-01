@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Posts < BasePage
   def visit_new_post_page
     visit(Links::NEW_POST)

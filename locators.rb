@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module EntryPageLocators
   LOGIN = 'input[type="submit"]'
 end
