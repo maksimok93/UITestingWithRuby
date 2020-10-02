@@ -76,11 +76,13 @@ feature 'OpenSourceCMS test', type: :feature do
     it 'Verifies users role can be edited' do
       @users_page.change_users_role('John', 'Editor')
       expect(page).to have_content('Changed roles.')
+      expect(page).to have_xpath(@users_page.get_users_role_xpath('Editor'))
     end
 
     it 'Verifies user can be deleted' do
       @users_page.delete_user('John')
       expect(page).to have_content('User deleted.')
+      expect(page).not_to have_content('John')
     end
 
     it 'Verifies if Search Users button is enabled' do

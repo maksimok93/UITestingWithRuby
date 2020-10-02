@@ -41,6 +41,10 @@ class Users < BasePage
     click_button('Confirm Deletion')
   end
 
+  def get_users_role_xpath(role)
+    "//td[contains(@data-colname, 'Role') and text() = '#{role}']"
+  end
+
   def change_users_role(name, new_role)
     check("Select #{name}")
     choose_dropdown_component(new_role.to_s, UsersLocators::NEW_ROLE, UsersLocators::CHANGE)
