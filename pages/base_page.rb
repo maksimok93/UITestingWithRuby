@@ -9,14 +9,6 @@ class BasePage
   include Capybara::DSL
   include Components
 
-  private
-
-  def get_file_content(filename)
-    IO.readlines(filename.to_s)
-  end
-
-  public
-
   def on_page?
     find(:css, LeftMenuLocators::LEFT_MENU).visible?
   end
@@ -51,5 +43,11 @@ class BasePage
 
   def new_dropdown
     select('Post', from: HeaderLocators::NEW)
+  end
+
+  private
+
+  def get_file_content(filename)
+    IO.readlines(filename.to_s)
   end
 end
