@@ -17,3 +17,8 @@ end
 Capybara.run_server = false
 Capybara.default_driver = :selenium
 Capybara.app_host = Links::ENTRY_PAGE
+
+RSpec.configure do |config|
+  config.color = true
+  config.formatter = :documentation
+end

@@ -9,6 +9,7 @@ group :test do
   gem 'selenium-webdriver'
 end
 
+gem 'rspec_html_reporter'
 gem 'rake'
 gem 'rubocop', require: false
 gem 'webdrivers', '~> 4.0', require: false
