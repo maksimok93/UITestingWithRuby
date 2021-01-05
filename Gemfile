@@ -2,12 +2,15 @@
 
 source 'https://rubygems.org'
 
-gem 'capybara'
+group :test do
+  gem 'capybara'
+  gem 'chromedriver-helper'
+  gem 'rspec'
+  gem 'selenium-webdriver'
+end
+
 gem 'rake'
-gem 'rspec'
 gem 'rubocop', require: false
-gem 'selenium-webdriver'
+gem 'webdrivers', '~> 4.0', require: false
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
-
-# gem "rails"
