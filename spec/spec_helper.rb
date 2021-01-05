@@ -1,14 +1,14 @@
-# frozen_string_literal: true
-
 require 'capybara'
-require 'selenium/webdriver'
 require 'capybara/rspec'
+require 'selenium/webdriver'
+require 'webdrivers/chromedriver'
 require_relative '../pages/base_page'
 require_relative '../pages/dashboard_page'
 require_relative '../pages/posts_page'
 require_relative '../pages/users_page'
 require_relative '../pages/export_page'
 require_relative '../locators'
+require_relative '../links'
 
 Capybara.register_driver :selenium do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome)

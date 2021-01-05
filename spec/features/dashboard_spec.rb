@@ -2,8 +2,9 @@
 
 require_relative '../spec_helper'
 
-feature 'OpenSourceCMS Dashboard test', type: :feature do
-  describe 'When on Dashboard Page' do
+RSpec.describe 'OpenSourceCMS Dashboard test', type: :feature do
+  context 'When on Dashboard Page' do
+
     before(:each) do
       @dashboard_page = Dashboard.new
       @dashboard_page.open_main_page

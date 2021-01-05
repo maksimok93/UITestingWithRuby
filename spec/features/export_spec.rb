@@ -4,8 +4,8 @@ require_relative '../spec_helper'
 
 RADIO_BUTTONS = ['All content', 'Posts', 'Pages', 'Media'].to_a.freeze
 
-feature 'OpenSourceCMS Tools test', type: :feature do
-  describe 'When on Tools Page' do
+RSpec.describe 'OpenSourceCMS Tools test', type: :feature do
+  context 'When on Tools Page' do
     before(:each) do
       @export_page = Export.new
       @export_page.open_main_page

@@ -2,8 +2,9 @@
 
 require_relative '../spec_helper'
 
-feature 'OpenSourceCMS test', type: :feature do
-  describe 'When on New User Page,' do
+RSpec.describe 'OpenSourceCMS test', type: :feature do
+  context 'When on New User Page,' do
+
     let(:user) { eval(File.open('tests_data/users', &:read)) }
     let(:messages) { eval(File.open('tests_data/messages', &:read)) }
 
@@ -60,7 +61,7 @@ feature 'OpenSourceCMS test', type: :feature do
     end
   end
 
-  describe 'When on User Page' do
+  context 'When on User Page' do
     before(:each) do
       @users_page = Users.new
       @users_page.open_main_page

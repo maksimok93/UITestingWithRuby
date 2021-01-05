@@ -2,8 +2,9 @@
 
 require_relative '../spec_helper'
 
-feature 'OpenSourceCMS Posts test', type: :feature do
-  describe 'When on Posts Page' do
+RSpec.describe 'OpenSourceCMS Posts test', type: :feature do
+  context 'When on Posts Page' do
+
     before(:each) do
       @posts_page = Posts.new
       @posts_page.open_main_page
